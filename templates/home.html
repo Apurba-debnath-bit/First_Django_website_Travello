@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style="text-align: center;"> Hello I am {{name}} !!!</h1><br>
+
+    <div>
+        <form action="add" method="post">
+        {% csrf_token %}
+          <label for="fname">First Number</label>
+          <input type="text" id="fnum" name="num1" placeholder="Enter the first number">
+      
+          <label for="lname">Last Number</label>
+          <input type="text" id="lnum" name="num2" placeholder="Enter the second number">
+      
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+{% endblock %}
+
